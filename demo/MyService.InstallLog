@@ -1,0 +1,13 @@
+﻿Installing assembly 'F:\Debug\MyService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\Debug\MyService.InstallLog
+   assemblypath = F:\Debug\MyService.exe
+Installing service MyService...
+Service MyService has been successfully installed.
+Creating EventLog source MyService in log Application...
+Committing assembly 'F:\Debug\MyService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\Debug\MyService.InstallLog
+   assemblypath = F:\Debug\MyService.exe
