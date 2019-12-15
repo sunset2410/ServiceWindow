@@ -42,6 +42,8 @@ namespace MyService
         private void OnElapsedTime(object source, ElapsedEventArgs e)
         {
             WriteToFile("Service is recall at " + DateTime.Now);
+            string filepath = AppDomain.CurrentDomain.BaseDirectory + "\\Logs\\ServiceLog.txt";
+            File.WriteAllText(filepath, "");
 
             HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create("https://finance.yahoo.com/cryptocurrencies?count=100&offset=0");
             myRequest.Method = "GET";
@@ -64,7 +66,8 @@ namespace MyService
             priceIOTA = parserKey("IOTA");
             WriteToFile("Price IOTA at " + DateTime.Now + " : " + priceIOTA.ToString());
 
-
+            string path = AppDomain.CurrentDomain.BaseDirectory + "Logs";
+            Process.Start("explorer.exe", path);
         }
 
         public float parserKey(string key)
@@ -87,7 +90,10 @@ namespace MyService
             {
                 Directory.CreateDirectory(path);
             }
-            string filepath = AppDomain.CurrentDomain.BaseDirectory + "\\Logs\\ServiceLog_" + DateTime.Now.Date.ToShortDateString().Replace('/', '_') + ".txt";
+
+            //string filepath = AppDomain.CurrentDomain.BaseDirectory + "\\Logs\\ServiceLog_" + DateTime.Now.Date.ToShortDateString().Replace('/', '_') + ".txt";
+
+            string filepath = AppDomain.CurrentDomain.BaseDirectory + "\\Logs\\ServiceLog.txt";
             if (!File.Exists(filepath))
             {
                 // Create a file to write to.   
@@ -100,6 +106,7 @@ namespace MyService
             {
                 using (StreamWriter sw = File.AppendText(filepath))
                 {
+                    
                     sw.WriteLine(Message);
                 }
             }
