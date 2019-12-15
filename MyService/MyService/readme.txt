@@ -39,3 +39,19 @@ InstallUtil.exe F:\Project Github\sunset\sunset\Service\MyService\MyService\bin\
 InstallUtil.exe F:\\Project Github\\Debug\\MyService.exe    not ok
 
 InstallUtil.exe F:\Debug\MyService.exe    ok
+
+
+https://finance.yahoo.com/quote/ICX-USD?
+
+https://finance.yahoo.com/quote/XRP-USD?
+
+https://finance.yahoo.com/quote/MIOTA-USD?
+
+https://finance.yahoo.com/quote/XLM-USD?
+
+https://finance.yahoo.com/cryptocurrencies
+
+https://coinmarketcap.com/
+
+
+https://finance.yahoo.com/cryptocurrencies?offset=0&count=100
