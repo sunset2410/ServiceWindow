@@ -53,12 +53,17 @@ namespace MyService
 
             //Stellar
             priceXLM = parserKey("Stellar");
+            WriteToFile("Price Stellar at " + DateTime.Now+ " : "+ priceXLM.ToString());
             //XRP
             priceXRP = parserKey("XRP");
+            WriteToFile("Price XRP at " + DateTime.Now + " : " + priceXRP.ToString());
             //ICON
             priceICX = parserKey("ICON");
+            WriteToFile("Price ICX at " + DateTime.Now + " : " + priceICX.ToString());
             //IOTA
             priceIOTA = parserKey("IOTA");
+            WriteToFile("Price IOTA at " + DateTime.Now + " : " + priceIOTA.ToString());
+
 
         }
 
