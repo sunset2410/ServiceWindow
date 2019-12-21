@@ -66,8 +66,15 @@ namespace MyService
             priceIOTA = parserKey("IOTA");
             WriteToFile("Price IOTA at " + DateTime.Now + " : " + priceIOTA.ToString());
 
-            string path = AppDomain.CurrentDomain.BaseDirectory + "Logs";
-            Process.Start("explorer.exe", path);
+            // XRP/IOTA
+            WriteToFile("Price XRP/IOTA at " + DateTime.Now + " : " + (priceXRP/priceIOTA).ToString() 
+                + "     500 XRP => " + ((priceXRP / priceIOTA)*500).ToString()+ " IOTA");
+            // XRP/ICX
+            WriteToFile("Price XRP/ICX at " + DateTime.Now + " : " + (priceXRP / priceICX).ToString()
+                +"      500 XRP => " + ((priceXRP / priceICX) * 500).ToString() + " ICX");
+
+            //string path = AppDomain.CurrentDomain.BaseDirectory + "Logs";
+            //Process.Start("explorer.exe", path);
         }
 
         public float parserKey(string key)
